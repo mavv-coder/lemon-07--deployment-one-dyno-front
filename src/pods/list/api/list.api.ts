@@ -8,8 +8,7 @@ export const getMemberList = async (
 ): Promise<Member[]> => {
   const { data } = await Axios.get(`${url}/${organization}`, {
     headers: {
-      'Access-Control-Allow-Origin':
-        'https://mavv-cloud-front-to-back.herokuapp.com',
+      'Access-Control-Allow-Origin': '*',
     },
   });
   return data;
